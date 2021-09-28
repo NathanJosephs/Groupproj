@@ -27,8 +27,8 @@ namespace TekkenClub.Pages.Account
         public IActionResult OnPost()
         {
             var isValidUser =
-                   EmailAddress == "admin@tekken.com"
-                && Password == "topsecret!";
+                   EmailAddress == "admin@school.com"
+                && Password == "admin";
 
             if(!isValidUser) {
                 ModelState.AddModelError("", "Invalid username or password!");
