@@ -30,8 +30,8 @@ namespace Groupproj
         {
             services.AddMvc(options => options.EnableEndpointRouting = false);
             //MAKE DO THING
-            //services.AddDbContext<unidb>(options =>
-           //         options.UseSqlServer(Configuration.GetConnectionString("unidb")));
+            services.AddDbContext<DbContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("unidb")));
             services.AddControllersWithViews();
         }
 

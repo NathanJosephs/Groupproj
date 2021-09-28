@@ -10,15 +10,16 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Groupproj.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace Groupproj.Views.Account
+namespace Groupproj.Views.Accounts
 {
-    [AllowAnonymous]
+   
     public class RegisterModel : PageModel
     {
-        private readonly unidbContext Db;
+        private readonly DbContext Db;
 
-        public RegisterModel(unidbContext Db)
+        public RegisterModel(DbContext Db)
         {
             this.Db = Db;
         }

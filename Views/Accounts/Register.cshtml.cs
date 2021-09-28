@@ -9,16 +9,17 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using TekkenClub.Models;
+using Groupproj.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace TekkenClub.Pages.Account
+namespace Groupproj.Views.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly AccountsDbContext Db;
+        private readonly DbContext Db;
 
-        public RegisterModel(AccountsDbContext Db)
+        public RegisterModel(DbContext Db)
         {
             this.Db = Db;
         }

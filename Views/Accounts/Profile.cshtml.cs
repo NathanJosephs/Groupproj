@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Groupproj.Views.Account
 {
-    public class ProfileModel : PageModel
+    public class Profile 
     {
         public void OnGet()
         {
