@@ -12,7 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Groupproj.Models;
 using Microsoft.EntityFrameworkCore;
-using Groupproj.Data;
+//using Groupproj.Data;
 namespace Groupproj
 {
     public class Startup
