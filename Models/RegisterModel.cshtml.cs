@@ -32,6 +32,17 @@ namespace Groupproj.Views.Account
 
         public class InputModel
         {
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "First Name")]
+            public string Fname { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Last Name")]
+            public string LName { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]

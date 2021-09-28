@@ -14,9 +14,9 @@ namespace Groupproj.Views.Account
 {
     public class LoginModel : PageModel
     {
-        private readonly AccountsDbContext Db;
+        private readonly unidbContext Db;
 
-        public LoginModel(AccountsDbContext Db)
+        public LoginModel(unidbContext Db)
         { 
             this.Db = Db;
         }
