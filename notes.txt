@@ -4,3 +4,6 @@
 @{
 }
 https://github.com/pschaeflein/mvc5-authorization-policy
+
+C# MVC identity system, roles etc
+https://www.c-sharpcorner.com/UploadFile/asmabegam/Asp-Net-mvc-5-security-and-creating-user-role/
