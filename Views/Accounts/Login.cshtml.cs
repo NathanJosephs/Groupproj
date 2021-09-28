@@ -8,53 +8,68 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using TekkenClub.Models;
 
 namespace TekkenClub.Pages.Account
 {
     public class LoginModel : PageModel
     {
+        private readonly AccountsDbContext Db;
+
+        public LoginModel(AccountsDbContext Db)
+        { 
+            this.Db = Db;
+        }
+        public string ReturnUrl { get; set; }
         [BindProperty]
         [Required]
         [Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
-        
+
         [BindProperty]
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync(string returnUrl)
         {
-            var isValidUser =
-                   EmailAddress == "admin@tekken.com"
-                && Password == "admin";
+            returnUrl = Url.Content("~/");
 
-            if(!isValidUser) {
-                ModelState.AddModelError("", "Invalid username or password!");
-            }
-
-            if(!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return Page();
+                var user = Db.RegisterModel.FirstOrDefault(login => login.EmailAddress == EmailAddress && login.Password == Password);
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Error: Incorrect Email and/or Password");
+                    return Page();
+                }
+
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.EmailAddress)
+                };
+
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var principal = new ClaimsPrincipal(identity);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                    principal,
+                    new AuthenticationProperties { IsPersistent = true });
+
+
+
+                return LocalRedirect(returnUrl);
             }
 
-            var scheme = CookieAuthenticationDefaults.AuthenticationScheme;
-
-            var user = new ClaimsPrincipal(
-                new ClaimsIdentity(
-                        new [] { new Claim(ClaimTypes.Name, EmailAddress) },
-                        scheme
-                    )
-                );
-            Response.Redirect("/index");
-            return SignIn(user, scheme);
+            return Page();
         }
+        
 
-        public async Task<IActionResult> OnPostLogoutAsync()
+    public async Task<IActionResult> OnPostLogoutAsync()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToPage("/Index");
-        }
+            
+            return RedirectToAction("/Index");
     }
 }
+    }

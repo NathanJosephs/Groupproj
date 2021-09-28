@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TekkenClub.Pages.Account
+namespace Groupproj.Views.Account
 {
     public class ProfileModel : PageModel
     {
