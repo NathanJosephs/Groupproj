@@ -9,4 +9,6 @@ C# MVC identity system, roles etc
 https://www.c-sharpcorner.com/UploadFile/asmabegam/Asp-Net-mvc-5-security-and-creating-user-role/
 
 sprint retrospective 1
-https://www.retrospect.team/board/28-9-2021-d46ec4cf-26ac-4aa5-b49f-e9a3b4e76e0b-15-4-27
+https://www.retrospect.team/board/19-10-2021-8584b169-7f93-4f4f-883d-9d73763c8472-13-19-23
+
+

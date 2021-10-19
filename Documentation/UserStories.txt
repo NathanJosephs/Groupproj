@@ -51,7 +51,7 @@ I want to have customizable time slots for a date
 so that the lecturer can see the available time slots.
 
 Tasks 6:
-Date/time managed in database 5/10? (program)
+Date/time managed in database 5/10 (program)
 
 User Story 7:
 As a student
