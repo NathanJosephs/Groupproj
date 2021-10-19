@@ -16,3 +16,7 @@ Upon checkout, the selected branch will be highlighted as bold in Team Explorer.
 Inorder to actually work on the project need to change view from folder to project "Switch between soloutions and available views"s
 
 ![image](https://user-images.githubusercontent.com/88696246/135010629-dd3b9c69-319e-4c7d-9f91-934029dcef39.png)
+
+
+👀Sprint Retrospective 1👀
+https://www.retrospect.team/board/19-10-2021-8584b169-7f93-4f4f-883d-9d73763c8472-13-19-23
