@@ -4,6 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Groupproj.Models.Account;
+
 //using Groupproj.Data;
 namespace Groupproj
 {
@@ -20,6 +23,16 @@ namespace Groupproj
         public void ConfigureServices(IServiceCollection services)
 
         {
+
+            services.AddDbContext<IdentityDataContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("IdentityDataContext");
+                options.UseSqlServer(connectionString);
+            });
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDataContext>();
+
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddDbContext<DbContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("unidb")));

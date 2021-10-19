@@ -1,4 +1,5 @@
-﻿using Groupproj.Models;
+﻿using Groupproj.Account.Models;
+using Groupproj.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
