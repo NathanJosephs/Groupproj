@@ -1,20 +1,45 @@
-﻿<div class="aboutustext">
-    <div class="columns">
-                    <div class="aboutustext">
-                        <h1>Login</h1>
-                    </div>
-    <p class="Login01">
-            <label class="usernamepassword" for="">Username:</label><br>
-            <input type="text" name="username" id="username">
-        </p>
-        <p class="Login01">
-            <label for="text">Password:</label><br>
-            <input type="password" name="password" id="password">
-        </p>
-        <p>
-            <a class="btn-primary">Login</a>
-        </p>
-       
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model Groupproj.Models.LoginModel
+@{
+    Layout = "_Layout";
+}
 
-    </div>
-</div>
+
+<fieldset class="account">
+
+    <h1>Login</h1>
+    <br />
+    <form role="form" asp-action="Login">
+
+        <div asp-validation-summary="All" class="input-validation-error"></div>
+
+        <div class="form-group">
+            <label asp-for="EmailAddress"></label>
+            <input type="email" asp-for="EmailAddress" class="form-control" />
+            <span asp-validation-for="EmailAddress" class="field-validation-error"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input type="password" asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="field-validation-error"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ConfirmPassword"></label>
+            <input type="password" asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="field-validation-error"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="RememberMe"></label>
+            <input type="checkbox" asp-for="RememberMe" />
+            <span asp-validation-for="RememberMe" class="field-validation-error"></span>
+        </div>
+        <div>
+            <label>&nbsp;</label>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+
+    </form>
+</fieldset>
