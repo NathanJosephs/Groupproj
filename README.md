@@ -19,4 +19,6 @@ Inorder to actually work on the project need to change view from folder to proje
 
 
 👀Sprint Retrospective 1👀
-https://www.retrospect.team/board/19-10-2021-8584b169-7f93-4f4f-883d-9d73763c8472-13-19-23
+https://www.retrospect.team/board/19-10-2021-8584b169-7f93-4f4f-883d-9d73763c8472-13-19-23S
+
+ERD and Use Case Diagram complete as of 19/10/2021 (first version)
