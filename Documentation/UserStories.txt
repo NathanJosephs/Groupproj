@@ -27,55 +27,45 @@ Tasks 3:
 Lecturer/class permission  2/10
 Schedule Form 3/10
 
+
 User Story 4:
-As a lecturer admin
-I want to enrol students in classes
-so that the students can access the class schedules.
-
-Tasks 4:
-Students in class in database 4/10
-Student access to class schedules 1/10
-
-User Story 5:
 As a lecturer admin
 I want to create Test/Presentation Schedule and time slots
 so that they are viewable to the students.
 
-Tasks 5:
+Tasks 4:
 Create exam timetable 3/10
 Assign student to time slots 3/10
 
-User Story 6:
+User Story 5:
 As a lecturer admin
 I want to have customizable time slots for a date
 so that the lecturer can see the available time slots.
 
-Tasks 6:
+Tasks 5:
 Date/time managed in database 5/10 (program)
 
-User Story 7:
+User Story 6:
 As a student
 I want to access the Test/Presentation Schedule 
 so that I can pick an appropriate time slot.
 
-Tasks 7:
+Tasks 6:
 Students logged in can access schedule 2/10
 Mutltiple students can have the same timeslot up to set maximum 3/10
 
-User Story 8:
+User Story 7:
 As a lecturer admin
 I want to remove a student from a time slot 
 so that the student can select a different time slot.
 
-Tasks 8:
+Tasks 7:
 Lecturers have permission to edit timeslots 3/10
 
-User Story 9
+User Story 8
 As a lecturer admin
 I want to reset any student’s application password
 so that students can access their accounts.
 
-Tasks 9:
+Tasks 8:
 Lecturers have permission to reset student passwords 3/10
-
-https://prod.liveshare.vsengsaas.visualstudio.com/join?F92BBEE522E11989D5F2E573E4D10915C60C       //Session is not active. Please contact the session host for a new link.
