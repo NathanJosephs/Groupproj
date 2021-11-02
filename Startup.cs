@@ -26,6 +26,19 @@ namespace Groupproj
         public void ConfigureServices(IServiceCollection services)
 
         {
+            services.AddSingleton<IAuthorizationService, >();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddAuthorization(options =>
+            {
+                services.AddAuthorization(options =>
+          options.AddPolicy("User",
+          policy => policy.RequireClaim("IsUser", "CanViewTimeTable")
+          options.AddPolicy("Admin",
+          policy => policy.RequireClaim("IsAdmin", "CanEditTimeTable", "CanViewTimeTable");
+            });
+
+          
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddDbContext<DbContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("unidb")));
