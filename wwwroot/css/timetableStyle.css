@@ -1,0 +1,37 @@
+﻿
+body {
+    background: #ECF0F1;
+}
+
+.wrapper {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+table caption {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.35em;
+}
+
+table tr {
+    height: 1.85em;
+}
+
+table td, table th {
+    text-align: center;
+    background: #FAFAFA;
+    border: 1px solid black;
+
+}
+
+table th {
+    font-weight: 400;
+}
