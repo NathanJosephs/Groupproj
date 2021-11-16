@@ -18,5 +18,14 @@ namespace Groupproj.Controllers
         {
             return View();
         }
+
+        public IActionResult EditExamTimetable()
+        {
+            return View();
+        }
+        public IActionResult EditClassTimetable()
+        {
+            return View();
+        }
     }
 }

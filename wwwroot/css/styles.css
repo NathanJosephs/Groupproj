@@ -76,9 +76,9 @@ color: var(--clr-primary-dark);
     transition: all 200ms ease-in;
 }
 
-    .link01:hover {
-        color: var(--clr-primary-hover);
-    }
+.link01:hover {
+    color: var(--clr-primary-hover);
+}
 
 .btn-primary {
     font-family: Montserrat, sans-serif;
